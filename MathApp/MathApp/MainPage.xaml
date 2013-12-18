@@ -11,10 +11,17 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="Mathematica" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50">
+        <TextBlock Text="Mathematics" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="White" Opacity="0.7"/>
             </TextBlock.Foreground>
         </TextBlock>
     </Grid>
+    <Page.BottomAppBar>
+        <AppBar>
+            <StackPanel Orientation="Horizontal">
+                <AppBarToggleButton Icon="Rotate" Label="Update"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
 </common:LayoutAwarePage>
