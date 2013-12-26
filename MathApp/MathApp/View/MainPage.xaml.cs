@@ -1,4 +1,5 @@
 ﻿using MathApp.Data;
+using MathApp.View;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,6 +17,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
+using Windows.UI.Popups;
 
 namespace MathApp
 {
@@ -55,7 +57,7 @@ namespace MathApp
 
         private void LineaRecta_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(RectaPage));
         }
 
         private void Circunferencia_Click(object sender, RoutedEventArgs e)
@@ -78,9 +80,10 @@ namespace MathApp
 
         }
 
-        //private void Ecuaciones_Click(object sender, RoutedEventArgs e)
-        //{
-        //    //this.Frame.Navigate(typeof(Ecuaciones));
-        //}
+        private async void About_Click(object sender, RoutedEventArgs e)
+        {
+            MessageDialog message = new MessageDialog("Message", "Title");
+            await message.ShowAsync();
+        }
     }
 }

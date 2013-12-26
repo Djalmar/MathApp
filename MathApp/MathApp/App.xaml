@@ -14,7 +14,57 @@
                     Required by Visual Studio project and item templates
                  -->
                 <ResourceDictionary Source="Common/StandardStyles.xaml"/>
+                
             </ResourceDictionary.MergedDictionaries>
+            
+            <!--PuntoPendiente-->
+            <DataTemplate x:Name="PuntoPendiente">
+                <StackPanel Width="1020">
+                    <TextBlock Text="La ecuación de la recta que pasa por el punto P1(x1, y1) y cuya pendiente sea m es" Style="{StaticResource BasicTextStyle}"/>
+                    <TextBlock Text="y - y1 = m(x - x1)" FontSize="30" Margin="23" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Hallar la ecuacion de la recta que pasa por el punto P1(x1, y1) y cuya pendiente es 'm':" Style="{StaticResource BasicTextStyle}" Margin="0,10"/>
+                    <StackPanel Width="1020" Height="400" Orientation="Horizontal">
+                        <StackPanel Width="520">
+                            <StackPanel Orientation="Horizontal" Margin="3">
+                                <TextBlock Text="P1(" FontSize="20"/>
+                                <TextBox Foreground="White" Background="Transparent" Margin="0,-5,0,0"/>
+                                <TextBlock Text="," FontSize="20"/>
+                                <TextBox Foreground="White" Background="Transparent" Margin="0,-5,0,0"/>
+                                <TextBlock Text=")" FontSize="20"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="3">
+                                <TextBlock Text="m = " FontSize="20"/>
+                                <TextBox Foreground="White" Background="Transparent" Margin="0,-5,0,0"/>
+                            </StackPanel>
+                            <Button Content="Resolver"/>
+                            <TextBlock Text="La solucion es:" Style="{StaticResource BasicTextStyle}" Margin="0,4"/>
+                            <StackPanel x:Name="SolucionPuntoPendiente">
+
+                                <TextBlock Text="Resultado" Style="{StaticResource BasicTextStyle}"/>
+                                <TextBlock Text="Resultado" Style="{StaticResource BasicTextStyle}"/>
+                                <TextBlock Text="Resultado" Style="{StaticResource BasicTextStyle}"/>
+                                <TextBlock Text="Resultado" Style="{StaticResource BasicTextStyle}"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Width="500">
+
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </DataTemplate>
+            
+            <DataTemplate x:Key="Graficos">
+                <StackPanel>
+                    <TextBlock Text="Hello world" Style="{StaticResource BasicTextStyle}"/>
+                </StackPanel>
+            </DataTemplate>
+            <DataTemplate x:Key="Introduccion">
+                <StackPanel>
+                    <TextBlock Text="analíticamente, es una ecuación lineal o de primer grado en dos variables.
+Recíprocamente, la representacion gráfica del lugar geométrico cuya ecuación sea de primer
+grado en dos variables es una recta" Style="{StaticResource BasicTextStyle}"/>
+                </StackPanel>
+            </DataTemplate>
 
             <!-- Application-specific resources -->
 

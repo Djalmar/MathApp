@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="MathApp.View.RectaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MathApp.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Hub Background="#FF212234">
+        <Hub.Transitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Hub.Transitions>
+        <Hub.Header>
+            <StackPanel Orientation="Horizontal" Margin="-30,0,0,0">
+                <AppBarButton Icon="Back" Tapped="Back_Tapped"/>
+                <TextBlock Text="Linea Recta"/>
+            </StackPanel>
+        </Hub.Header>
+        <HubSection Width="300">
+            <DataTemplate>
+                <StackPanel>
+                    <Button Content="Una recta" Margin="10"
+                            Click="Intro_Click"
+                            Style="{StaticResource btnStandarRectaButton}"/>
+                    
+                    <Button Content="Punto pendiente" Margin="10"
+                            Click="Saludo_Click"
+                            Style="{StaticResource btnStandarRectaButton}"/>
+
+                    <Button Content="Pendiente ordenada en el origen" Margin="10"
+                            Style="{StaticResource btnStandarRectaButton}"/>
+
+                    <Button Content="Cartesiana" Margin="10"
+                            Style="{StaticResource btnStandarRectaButton}"/>
+
+                    <Button Content="Reducida o abscisa y ordenada al origen" Margin="10"
+                            Style="{StaticResource btnStandarRectaButton}"/>
+
+                    <Button Content="General" Margin="10"
+                            Style="{StaticResource btnStandarRectaButton}"/>
+
+                    <Button Content="Normal" Margin="10"
+                            Style="{StaticResource btnStandarRectaButton}"/>
+
+                    <Button Content="Resolver" Margin="10"
+                            Style="{StaticResource btnStandarRectaButton}"/>
+                </StackPanel>
+            </DataTemplate>
+        </HubSection>
+        <!--<HubSection Name="BodyApp"
+                    Width="1060"/>-->
+        <HubSection Name="BodyApp"
+                    ContentTemplate="{StaticResource PuntoPendiente}"
+                    Width="1060">
+            
+        </HubSection>
+    </Hub>
+
+</Page>

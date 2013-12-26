@@ -12,7 +12,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Hub Background="White">
+    <Hub Background="#FF212234">
+        <Hub.Transitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Hub.Transitions>
         <Hub.Header>
             <StackPanel>
                 <TextBlock Text="Matematicas"
@@ -66,9 +71,11 @@
         </HubSection>
     </Hub>
     <Page.BottomAppBar>
-        <AppBar>
+        <AppBar Background="#FF00A2FF">
             <StackPanel Orientation="Horizontal">
                 <AppBarToggleButton Icon="Rotate" Label="Update"/>
+                <AppBarSeparator Foreground="#FFF7F5F5"/>
+                <AppBarToggleButton Icon="Tag" Label="About" Click="About_Click"/>
             </StackPanel>
         </AppBar>
     </Page.BottomAppBar>
